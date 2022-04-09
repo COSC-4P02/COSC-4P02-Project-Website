@@ -1,1 +1,3 @@
-# COSC-4P02
+# Chatbot-Ai Homepage
+
+[Try it now](https://chatbot-ai.ga)

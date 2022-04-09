@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.getElementsByTagName("html")[0].className += " js";</script>
+  <link rel="stylesheet" href="https://api-frame.krunk.cn/main/assets/css/style.min.css">
+  <title>Home | Chatbot-Ai</title>
+  <meta name="description" content="Group project for Professor Naser Ezzati-Jivan's COSC 4P02 class at Brock Universtiy. Winter 2022 term.">
+  <meta name="keywords" content="brock,brocku,brock chatbot,brock university,chatbot">
+  <script rel="preload" src="https://api-frame.krunk.cn/main/assets/js/scripts.min.js"></script>
+  <style>
+    .btn-fx-1__inner_brock::after {
+        background-color: hsla(0, 100%, 20%, 1) !important;
+    }
+    @media only screen and (max-width: 1024px){
+      #hide-on-mobile{
+        display: none;
+      }
+    }
+    @media only screen and (min-width: 1024px){
+      #show-on-mobile{
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <header class="f-header js-f-header position-relative">
+    <div class="f-header__mobile-content container max-width-lg">
+      <a href="/" class="f-header__logo">
+        <img src="images/logo.webp" width="40px">
+      </a>
+
+      <button class="reset anim-menu-btn js-anim-menu-btn f-header__nav-control js-tab-focus" aria-label="Toggle menu">
+        <i class="anim-menu-btn__icon anim-menu-btn__icon--close" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div class="f-header__nav" role="navigation">
+      <div class="f-header__nav-grid justify-between@md container max-width-lg">
+        <div class="f-header__nav-logo-wrapper flex-grow flex-basis-0">
+          <a href="/" class="f-header__logo">
+            <img src="images/logo.webp" width="50px">
+          </a>
+        </div>
+
+        <ul class="f-header__list flex-grow flex-basis-0 justify-center@md">
+          <li class="f-header__item"><a href="https://chatbot-ai.ga" class="f-header__link" aria-current="page">Home</a></li>
+          <li class="f-header__item"><button class="reset f-header__dropdown-control js-f-header__dropdown-control">
+              <span>Chatbot</span>
+              <svg class="f-header__dropdown-icon icon" aria-hidden="true" viewBox="0 0 12 12">
+                <path d="M9.943,4.269A.5.5,0,0,0,9.5,4h-7a.5.5,0,0,0-.41.787l3.5,5a.5.5,0,0,0,.82,0l3.5-5A.5.5,0,0,0,9.943,4.269Z" />
+              </svg>
+            </button>
+
+            <ul class="f-header__dropdown">
+              <li><a href="https://web.chatbot-ai.ga/?bot=brock" class="f-header__dropdown-link" target="_blank">Brock University</a></li>
+              <li><a href="https://web.chatbot-ai.ga/?bot=game" class="f-header__dropdown-link" target="_blank">Canada Games 2022</a></li>
+            </ul>
+          </li>
+          <li class="f-header__item"><a href="https://app.chatbot-ai.ga" class="f-header__link">App</a></li>
+          <li class="f-header__item"><a href="https://app.chatbot-ai.ga/privacy.html" class="f-header__link">TOS</a></li>
+          <li class="f-header__item"><a href="https://docs.chatbot-ai.ga" class="f-header__link" target="_blank">Docs</a></li>
+          <li class="f-header__item"><button class="reset f-header__dropdown-control js-f-header__dropdown-control">
+              <span>Social</span>
+              <svg class="f-header__dropdown-icon icon" aria-hidden="true" viewBox="0 0 12 12">
+                <path d="M9.943,4.269A.5.5,0,0,0,9.5,4h-7a.5.5,0,0,0-.41.787l3.5,5a.5.5,0,0,0,.82,0l3.5-5A.5.5,0,0,0,9.943,4.269Z" />
+              </svg>
+            </button>
+
+            <ul class="f-header__dropdown">
+              <li><a href="https://discord.gg/kSDPxkVh5T" class="f-header__dropdown-link" target="_blank">Discord Channel</a></li>
+              <li><a href="https://discord.com/api/oauth2/authorize?client_id=957973848144375868&permissions=8&scope=bot" class="f-header__dropdown-link" target="_blank">Discord Bot</a></li>
+              <li><a href="https://www.facebook.com/Brock-Chat-bot-101894422491148/" class="f-header__dropdown-link" target="_blank">Facebook Messenger</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="f-header__list flex-grow flex-basis-0 justify-end@md">
+          <li class="f-header__item"><a href="http://github.com/COSC-4P02/COSC4P02Project" class="f-header__link" target="_blank">Github</a></li>
+          <li class="f-header__item"><a href="https://app.chatbot-ai.ga" class="f-header__btn btn btn--primary">Download Now</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+
+<section class="feature-v9 position-relative z-index-1">
+  <div class="grid">
+    <div class="feature-v9__block col-6@md" style="background-image: url('images/brock.webp');">
+      <div class="feature-v9__content text-center max-width-xxxs">
+        <div class="text-component">
+          <p class="text-md color-inherit" style="margin-bottom: 0px;">Have Questions About</p>
+          <h2 class="text-xxl color-inherit" style="margin-top: 0px;">Brock University ?</h2>
+          <p class="opacity-90%">You can ask me almost anything about Brock University</p>
+        </div>
+
+        <div class="margin-top-sm"><a class="feature-v9__link" href="https://web.chatbot-ai.ga/?bot=brock">Ask Me</a> <a class="feature-v9__link" href="https://app.chatbot-ai.ga/" id="show-on-mobile">App</a></div>
+      </div>
+    </div>
+
+    <div class="feature-v9__block col-6@md" style="background-image: url('images/game.webp');">
+      <div class="feature-v9__content text-center max-width-xxxs">
+        <div class="text-component">
+          <p class="text-md color-inherit" style="margin-bottom: 0px;">Have Questions About</p>
+          <h2 class="text-xxl color-inherit" style="margin-top: 0px;">Canada Games ?</h2>
+          <p class="opacity-90%">You can ask me almost anything about Canada Games 2022</p>
+        </div>
+
+        <div class="margin-top-sm"><a class="feature-v9__link" href="https://web.chatbot-ai.ga/?bot=game">Ask Me</a> <a class="feature-v9__link" href="https://app.chatbot-ai.ga/" id="show-on-mobile">App</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="feature-v4 margin-top-md">
+  <div class="container max-width-adaptive-lg">
+    <div class="feature-v4__grid grid gap-md items-center">
+      <div class="col-5@md position-relative z-index-1">
+        <div class="text-sm color-contrast-medium margin-bottom-xxs">Chatbot-Ai</div>
+
+        <div class="text-component">
+          <h1 class="text-xxxl feature-v4__text-offset@md">Students / Vistors are Online 24/7, Now We Are, Too! </h1>
+          <p id="hide-on-mobile">Group project for Professor Naser Ezzati-Jivan's COSC 4P02 class at Brock Universtiy. Winter 2022 term.</p>
+        </div>
+
+        <div class="margin-top-sm">
+          <div class="flex flex-wrap gap-sm items-center">
+            <a class="btn-fx-1" href="https://web.chatbot-ai.ga/?bot=brock" style="color: #ffffff;">
+              <div class="btn-fx-1__inner padding-y-xs padding-x-sm btn-fx-1__inner_brock" style="background-color: #c00;">
+                <span>Ask Brock University Chatbot</span>
+
+                <div class="btn-fx-1__icon-wrapper" aria-hidden="true">
+                  <svg class="icon margin-left-xxs" viewBox="0 0 20 20"><polyline points="8 5 13 10 8 15" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+
+                  <svg class="icon margin-left-xxs" viewBox="0 0 20 20"><polyline points="8 5 13 10 8 15" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="margin-top-sm">
+          <div class="flex flex-wrap gap-sm items-center">
+            <a class="btn-fx-1" href="https://web.chatbot-ai.ga/?bot=game" style="color: #ffffff;">
+              <div class="btn-fx-1__inner padding-y-xs padding-x-sm btn-fx-1__inner_game" style="background-color: #004f71;">
+                <span>Ask Canada Games 2022 Chatbot</span>
+
+                <div class="btn-fx-1__icon-wrapper" aria-hidden="true">
+                  <svg class="icon margin-left-xxs" viewBox="0 0 20 20"><polyline points="8 5 13 10 8 15" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+
+                  <svg class="icon margin-left-xxs" viewBox="0 0 20 20"><polyline points="8 5 13 10 8 15" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="margin-top-sm">
+          <div class="flex flex-wrap gap-sm items-center">
+            <a class="btn-fx-1" href="https://app.chatbot-ai.ga">
+              <div class="btn-fx-1__inner padding-y-xs padding-x-sm btn-fx-1__inner_game">
+                <span>Download App</span>
+
+                <div class="btn-fx-1__icon-wrapper" aria-hidden="true">
+                  <svg class="icon margin-left-xxs" viewBox="0 0 20 20"><polyline points="8 5 13 10 8 15" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+
+                  <svg class="icon margin-left-xxs" viewBox="0 0 20 20"><polyline points="8 5 13 10 8 15" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-7@md" id="hide-on-mobile">
+        <figure class="position-relative">
+          <img class="block width-100%" src="images/chatbot.webp" alt="Product Image">
+          <ul class="poi js-poi">
+            <li style="top: 21%; right: 13%;" class="poi__item js-poi__item">
+              <button class="reset poi__btn" aria-label="Click for more info" aria-controls="poi-modal-bot-1">
+                <svg class="icon" viewBox="0 0 12 12" aria-hidden="true"><path d="M11,5H7V1A1,1,0,0,0,5,1V5H1A1,1,0,0,0,1,7H5v4a1,1,0,0,0,2,0V7h4a1,1,0,0,0,0-2Z"></path></svg>
+              </button>
+            </li>
+            <li style="top: 34.5%; right: 25.5%;" class="poi__item js-poi__item">
+              <button class="reset poi__btn" aria-label="Click for more info" aria-controls="poi-modal-bot-2">
+                <svg class="icon" viewBox="0 0 12 12" aria-hidden="true"><path d="M11,5H7V1A1,1,0,0,0,5,1V5H1A1,1,0,0,0,1,7H5v4a1,1,0,0,0,2,0V7h4a1,1,0,0,0,0-2Z"></path></svg>
+              </button>
+            </li>
+            <li style="bottom: 3%; right: 17%;" class="poi__item js-poi__item">
+              <button class="reset poi__btn" aria-label="Click for more info" aria-controls="poi-modal-bot-3">
+                <svg class="icon" viewBox="0 0 12 12" aria-hidden="true"><path d="M11,5H7V1A1,1,0,0,0,5,1V5H1A1,1,0,0,0,1,7H5v4a1,1,0,0,0,2,0V7h4a1,1,0,0,0,0-2Z"></path></svg>
+              </button>
+            </li>
+          </ul>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hiw-v2 position-relative z-index-1 padding-y-xl">
+  <div class="container max-width-adaptive-lg">
+    <div class="margin-bottom-xl">
+      <h1 class="text-center">How it works</h1>
+    </div>
+
+    <ul class="hiw-v2__grid">
+      <li class="hiw-v2__item">
+        <figure class="hiw-v2__figure margin-bottom-md">
+          <img class="block width-100% radius-lg shadow-sm" src="images/how-it-works-1.webp" alt="Image description">
+
+          <svg class="hiw-v2__arrow" viewBox="0 0 40 40">
+            <circle cx="20" cy="20" r="20" fill="var(--color-primary)"/>
+            <polyline points="29 17 20 26 11 17" fill="none" stroke="var(--color-white)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </svg>
+        </figure>
+
+        <div class="text-component text-space-y-md line-height-md">
+          <h2 class="text-md">1. Ask Questions</h2>
+          <p class="color-contrast-medium">Type in Question in the Chatbot</p>
+        </div>
+      </li>
+      
+      <li class="hiw-v2__item">
+        <figure class="hiw-v2__figure margin-bottom-md">
+          <img class="block width-100% radius-lg shadow-sm" src="images/how-it-works-2.webp" alt="Image description">
+
+          <svg class="hiw-v2__arrow" viewBox="0 0 40 40">
+            <circle cx="20" cy="20" r="20" fill="var(--color-primary)"/>
+            <polyline points="29 17 20 26 11 17" fill="none" stroke="var(--color-white)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </svg>
+        </figure>
+
+        <div class="text-component text-space-y-md line-height-md">
+          <h2 class="text-md">2. Process by NLP</h2>
+          <p class="color-contrast-medium">Tokenize the Question and Find Answer from Database</p>
+        </div>
+      </li>
+
+      <li class="hiw-v2__item">
+        <figure class="hiw-v2__figure margin-bottom-md">
+          <img class="block width-100% radius-lg shadow-sm" src="images/how-it-works-3.webp" alt="Image description">
+        </figure>
+
+        <div class="text-component text-space-y-md line-height-md">
+          <h2 class="text-md">3. Get Feedback</h2>
+          <p class="color-contrast-medium">The Chatbot Returns a Message Bubble</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="position-relative z-index-1 padding-y-xl">
+  <div class="container max-width-adaptive-lg">
+    <div class="grid gap-lg items-center">
+      <div class="col-5@md col-4@lg">
+        <div class="text-component">
+          <p class="text-sm color-contrast-medium" id="hide-on-mobile">Canada Games & Brock University Chatbot Project</p>
+          <h1>Multi Platform</h1>
+          <p>Support any devices with a broswer or native app on IOS and Android.</p>
+          <p>Even on Discord and FB Messenger!</p>
+        </div>
+
+        <div class="margin-top-sm">
+          <div class="flex flex-wrap gap-sm items-center">
+            <a href="https://web.chatbot-ai.ga" class="btn btn--primary">Try Online</a>
+            <a href="https://app.chatbot-ai.ga" class="btn btn--primary">Download App</a>
+            <a href="https://discord.gg/kSDPxkVh5T" class="btn btn--primary" target="_blank">Join Discord</a>
+            <a href="https://www.facebook.com/Brock-Chat-bot-101894422491148/" class="btn btn--primary" target="_blank">Ask Messenger</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-7@md col-8@lg">
+        <div class="device-group-4">
+
+          <div class="dev-phone dev-phone--top-light" aria-label="Image description">
+            <div class="dev-phone__body">
+              <div class="dev-phone__media">
+                <div class="dev-phone__notch"></div>
+<figure class="position-relative z-index-1">
+  <img class="block width-100%" src="https://app.chatbot-ai.ga/images/IMG_04491.webp" alt="Product Image">
+  <ul class="poi js-poi">
+    <li style="top: 20%; right: 10%;" class="poi__item js-poi__item">
+      <button class="reset poi__btn" aria-label="Click for more info" aria-controls="poi-modal-2">
+        <svg class="icon" viewBox="0 0 12 12" aria-hidden="true" style="width:17px;"><path d="M11,5H7V1A1,1,0,0,0,5,1V5H1A1,1,0,0,0,1,7H5v4a1,1,0,0,0,2,0V7h4a1,1,0,0,0,0-2Z"></path></svg>
+      </button>
+    </li>
+  </ul>
+</figure>
+              </div>
+            </div>
+            <div class="dev-phone__shadow"></div>
+          </div>
+
+          <div class="dev-desktop " aria-label="Image description">
+            <div class="dev-desktop__body">
+              <div class="dev-desktop__media">
+<figure class="position-relative z-index-1">
+  <img class="block width-100%" src="images/discord-desktop.webp" alt="Product Image">
+  <ul class="poi js-poi">
+    <li style="top: 20%; right: 20%;" class="poi__item js-poi__item">
+      <button class="reset poi__btn" aria-label="Click for more info" aria-controls="poi-modal-3">
+        <svg class="icon" viewBox="0 0 12 12" aria-hidden="true" style="width:17px;"><path d="M11,5H7V1A1,1,0,0,0,5,1V5H1A1,1,0,0,0,1,7H5v4a1,1,0,0,0,2,0V7h4a1,1,0,0,0,0-2Z"></path></svg>
+      </button>
+    </li>
+  </ul>
+</figure>
+              </div>
+            </div>
+            <div class="dev-desktop__base">
+              <div class="dev-desktop__base-top"></div>
+              <div class="dev-desktop__base-bottom"></div>
+              <div class="dev-desktop__shadow"></div>
+            </div>
+          </div>
+
+          <div class="dev-laptop " aria-label="Image description">
+            <div class="dev-laptop__body">
+              <div class="dev-laptop__media">
+<figure class="position-relative z-index-1">
+  <img class="block width-100%" src="images/brock-desktop.webp" alt="Product Image">
+  <ul class="poi js-poi">
+    <li style="top: 20%; right: 30%;" class="poi__item js-poi__item">
+      <button class="reset poi__btn" aria-label="Click for more info" aria-controls="poi-modal-1">
+        <svg class="icon" viewBox="0 0 12 12" aria-hidden="true" style="width:17px;"><path d="M11,5H7V1A1,1,0,0,0,5,1V5H1A1,1,0,0,0,1,7H5v4a1,1,0,0,0,2,0V7h4a1,1,0,0,0,0-2Z"></path></svg>
+      </button>
+    </li>
+  </ul>
+</figure>
+              </div>
+            </div>
+            <div class="dev-laptop__base"></div>
+            <div class="dev-laptop__shadow"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- POI 1 -->
+<div id="poi-modal-1" class="modal modal--animate-scale flex flex-center bg-black bg-opacity-90% padding-md js-modal">
+  <div class="modal__content width-100% max-width-xxs max-width-xs@md max-height-100% overflow-auto bg radius-md inner-glow shadow-md" role="alertdialog">
+    <div class="padding-sm">
+      <div class="grid gap-sm">
+        <figure class="col-5@md">
+          <img class="block width-100%" src="images/brock-desktop.webp" alt="Image description">
+        </figure>
+        <div class="col-7@md">
+          <div class="text-component">
+            <h1 class="text-lg">Web Version</h1>
+            <p class="color-contrast-medium">Access the Chatbot from Anywhere on a Browser</p>
+          </div>
+        </div>
+      </div>
+      <footer class="margin-top-sm flex justify-between items-center">
+        <p></p><a class="btn btn--primary" href="https://web.chatbot-ai.ga/">Try Now</a>
+      </footer>
+    </div>
+  </div>
+  <button class="reset modal__close-btn modal__close-btn--outer js-modal__close js-tab-focus">
+    <svg class="icon icon--sm" viewBox="0 0 24 24">
+      <title>Close modal window</title>
+      <g fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="3" x2="21" y2="21" />
+        <line x1="21" y1="3" x2="3" y2="21" />
+      </g>
+    </svg>
+  </button>
+</div>
+<!-- POI 2 -->
+<div id="poi-modal-2" class="modal modal--animate-scale flex flex-center bg-black bg-opacity-90% padding-md js-modal" style="z-index: 100000 !important;">
+  <div class="modal__content width-100% max-width-xxs max-width-xs@md max-height-100% overflow-auto bg radius-md inner-glow shadow-md" role="alertdialog">
+    <div class="padding-sm">
+      <div class="grid gap-sm">
+        <figure class="col-5@md">
+          <img class="block width-100%" src="https://app.chatbot-ai.ga/images/IMG_04491.webp" alt="Image description">
+        </figure>
+        <div class="col-7@md">
+          <div class="text-component">
+            <h1 class="text-lg">Mobile Version</h1>
+            <p class="color-contrast-medium">Access the Chatbot from Anywhere on a IOS or Android Device</p>
+          </div>
+        </div>
+      </div>
+      <footer class="margin-top-sm flex justify-between items-center">
+        <p></p><a class="btn btn--primary" href="https://app.chatbot-ai.ga/">Download Now</a>
+      </footer>
+    </div>
+  </div>
+  <button class="reset modal__close-btn modal__close-btn--outer js-modal__close js-tab-focus">
+    <svg class="icon icon--sm" viewBox="0 0 24 24">
+      <title>Close modal window</title>
+      <g fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="3" x2="21" y2="21" />
+        <line x1="21" y1="3" x2="3" y2="21" />
+      </g>
+    </svg>
+  </button>
+</div>
+<!-- POI 3 -->
+<div id="poi-modal-3" class="modal modal--animate-scale flex flex-center bg-black bg-opacity-90% padding-md js-modal">
+  <div class="modal__content width-100% max-width-xxs max-width-xs@md max-height-100% overflow-auto bg radius-md inner-glow shadow-md" role="alertdialog">
+    <div class="padding-sm">
+      <div class="grid gap-sm">
+        <figure class="col-5@md">
+          <img class="block width-100%" src="images/discord-desktop.webp" alt="Image description">
+        </figure>
+        <div class="col-7@md">
+          <div class="text-component">
+            <h1 class="text-lg">Social Media Version</h1>
+            <p class="color-contrast-medium">Access the Chatbot from Anywhere on Discord or FB Messenger</p>
+          </div>
+        </div>
+      </div>
+      <footer class="margin-top-sm flex justify-between items-center">
+        <p></p><a class="btn btn--primary" href="https://discord.com/invite/kSDPxkVh5T" target="_blank">Join Now</a>
+      </footer>
+    </div>
+  </div>
+  <button class="reset modal__close-btn modal__close-btn--outer js-modal__close js-tab-focus">
+    <svg class="icon icon--sm" viewBox="0 0 24 24">
+      <title>Close modal window</title>
+      <g fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="3" x2="21" y2="21" />
+        <line x1="21" y1="3" x2="3" y2="21" />
+      </g>
+    </svg>
+  </button>
+</div>
+<!-- POI Bot 1 -->
+<div id="poi-modal-bot-1" class="modal modal--animate-scale flex flex-center bg-black bg-opacity-90% padding-md js-modal">
+  <div class="modal__content width-100% max-width-xxs max-width-xs@md max-height-100% overflow-auto bg radius-md inner-glow shadow-md" role="alertdialog">
+    <div class="padding-sm">
+      <div class="grid gap-sm">
+        <div class="col-7@md">
+          <div class="text-component">
+            <h1 class="text-lg">Settings Button</h1>
+            <p class="color-contrast-medium">You can download chatlog, clear logs or get help here.</p>
+          </div>
+        </div>
+      </div>
+      <footer class="margin-top-sm flex justify-between items-center">
+        <p></p><a class="btn btn--primary" href="https://web.chatbot-ai.ga">Try Now</a>
+      </footer>
+    </div>
+  </div>
+  <button class="reset modal__close-btn modal__close-btn--outer js-modal__close js-tab-focus">
+    <svg class="icon icon--sm" viewBox="0 0 24 24">
+      <title>Close modal window</title>
+      <g fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="3" x2="21" y2="21" />
+        <line x1="21" y1="3" x2="3" y2="21" />
+      </g>
+    </svg>
+  </button>
+</div>
+<!-- POI Bot 2 -->
+<div id="poi-modal-bot-2" class="modal modal--animate-scale flex flex-center bg-black bg-opacity-90% padding-md js-modal">
+  <div class="modal__content width-100% max-width-xxs max-width-xs@md max-height-100% overflow-auto bg radius-md inner-glow shadow-md" role="alertdialog">
+    <div class="padding-sm">
+      <div class="grid gap-sm">
+        <div class="col-7@md">
+          <div class="text-component">
+            <h1 class="text-lg">Action Button</h1>
+            <p class="color-contrast-medium">You can easily navagate through lots of options here.</p>
+          </div>
+        </div>
+      </div>
+      <footer class="margin-top-sm flex justify-between items-center">
+        <p></p><a class="btn btn--primary" href="https://web.chatbot-ai.ga">Try Now</a>
+      </footer>
+    </div>
+  </div>
+  <button class="reset modal__close-btn modal__close-btn--outer js-modal__close js-tab-focus">
+    <svg class="icon icon--sm" viewBox="0 0 24 24">
+      <title>Close modal window</title>
+      <g fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="3" x2="21" y2="21" />
+        <line x1="21" y1="3" x2="3" y2="21" />
+      </g>
+    </svg>
+  </button>
+</div>
+<!-- POI Bot 3 -->
+<div id="poi-modal-bot-3" class="modal modal--animate-scale flex flex-center bg-black bg-opacity-90% padding-md js-modal">
+  <div class="modal__content width-100% max-width-xxs max-width-xs@md max-height-100% overflow-auto bg radius-md inner-glow shadow-md" role="alertdialog">
+    <div class="padding-sm">
+      <div class="grid gap-sm">
+        <div class="col-7@md">
+          <div class="text-component">
+            <h1 class="text-lg">Input Box</h1>
+            <p class="color-contrast-medium">You can ask questions here.</p>
+          </div>
+        </div>
+      </div>
+      <footer class="margin-top-sm flex justify-between items-center">
+        <p></p><a class="btn btn--primary" href="https://web.chatbot-ai.ga">Try Now</a>
+      </footer>
+    </div>
+  </div>
+  <button class="reset modal__close-btn modal__close-btn--outer js-modal__close js-tab-focus">
+    <svg class="icon icon--sm" viewBox="0 0 24 24">
+      <title>Close modal window</title>
+      <g fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="3" x2="21" y2="21" />
+        <line x1="21" y1="3" x2="3" y2="21" />
+      </g>
+    </svg>
+  </button>
+</div>
+
+<!-- Footer -->
+<footer class="footer-v5 padding-y-lg">
+  <div class="container max-width-lg">
+    <div class="border-bottom padding-bottom-xs text-sm@md flex@md justify-between@md items-center@md">
+      <h4 class="margin-bottom-xs hide@md"></h4>
+      <nav></nav>
+      <a href="#" class="footer-v5__back-to-top display@md">Back to top &uarr;</a>
+    </div>
+    <!-- Footer Links -->
+    <div class="padding-y-xl grid gap-md">
+      <div class="col-8@lg">
+        <div class="grid gap-md">
+          <div class="col-6@xs col-3@md">
+            <h4 class="margin-bottom-xs text-base@md">Product</h4>
+            <ul class="grid gap-xs text-sm@md">
+              <li><a class="footer-v5__link" href="https://teams.chatbot-ai.ga/">Teams</a></li>
+              <li><a class="footer-v5__link" href="https://docs.chatbot-ai.ga/guide/getting-started.html">Tutorials</a></li>
+              <li><a class="footer-v5__link" href="mailto:info@chatbot-ai.ga">Contact</a></li>
+              <li><a class="footer-v5__link" href="https://docs.chatbot-ai.ga/code/open-source.html">License</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6@xs col-3@md">
+            <h4 class="margin-bottom-xs text-base@md">Developers</h4>
+            <ul class="grid gap-xs text-sm@md">
+              <li><a class="footer-v5__link" href="https://docs.chatbot-ai.ga">Documentation</a></li>
+              <li><a class="footer-v5__link" href="https://docs.chatbot-ai.ga/api/chat.html">API Reference</a></li>
+              <li><a class="footer-v5__link" href="http://uptime.krunk.cn" target="_blank">API Status</a></li>
+              <li><a class="footer-v5__link" href="https://github.com/COSC-4P02/" target="_blank">Open Source</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6@xs col-3@md">
+            <h4 class="margin-bottom-xs text-base@md">BrockU</h4>
+            <ul class="grid gap-xs text-sm@md">
+              <li><a class="footer-v5__link" href="https://brocku.ca" rel=”noreferrer” target="_blank">Website</a></li>
+              <li><a class="footer-v5__link" href="https://brocku.ca/brock-news/" rel=”noreferrer” target="_blank">News</a></li>
+              <li><a class="footer-v5__link" href="https://brocku.ca/library" rel=”noreferrer” target="_blank">Library</a></li>
+              <li><a class="footer-v5__link" href="https://brocku.ca/guides-and-timetables/timetables/" rel=”noreferrer” target="_blank">Timetables</a></li>
+              <li><a class="footer-v5__link" href="https://brocku.ca/webcal/" rel=”noreferrer” target="_blank">Web Calendars</a></li>
+              <li><a class="footer-v5__link" href="https://brocku.ca/important-dates/" rel=”noreferrer” target="_blank">Important Dates</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6@xs col-3@md">
+            <h4 class="margin-bottom-xs text-base@md">Games 2022</h4>
+            <ul class="grid gap-xs text-sm@md">
+              <li><a class="footer-v5__link" href="https://www.canadagames.ca" rel=”noreferrer” target="_blank">Website</a></li>
+              <li><a class="footer-v5__link" href="https://www.canadagames.ca/in-the-loop" rel=”noreferrer” target="_blank">News</a></li>
+              <li><a class="footer-v5__link" href="https://www.canadagames.ca/about" rel=”noreferrer” target="_blank">About</a></li>
+              <li><a class="footer-v5__link" href="https://www.canadagames.ca/sports" rel=”noreferrer” target="_blank">Sports</a></li>
+              <li><a class="footer-v5__link" href="https://www.canadagames.ca/teams" rel=”noreferrer” target="_blank">Teams</a></li>
+              <li><a class="footer-v5__link" href="https://www.canadagames.ca/athletes" rel=”noreferrer” target="_blank">Athletes</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-4@lg">
+        <div class="max-width-xxs">
+          <div class="text-component margin-bottom-sm">
+            <h4 class="text-base@md">About Our Project</h4>
+            <p class="text-sm color-contrast-medium">Group project for Professor Naser Ezzati-Jivan's COSC 4P02 class at Brock Universtiy. Winter 2022 term.</p>
+            <p class="text-sm color-contrast-medium">COSC 4P02 - Software Engineering 2</p>
+            <p class="text-sm color-contrast-medium">Application of software engineering. The development of a large-scale software engineering project in a competitive team setting, including creation of complete documentation for a working system.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Footer Bottom -->
+    <div class="border-top padding-top-sm">
+      <div class="flex flex-column items-center gap-sm flex-row@md justify-between@md">
+        <div>
+          <p class="text-sm color-contrast-medium text-xs@md">&copy; Copyright Chatbot-Ai 2022</p>
+          <p class="text-sm color-contrast-medium text-xs@md">Images and contents may come from brocku.ca and canadagames.ca</p>
+        </div>
+  
+        <div>
+          <p class="text-sm color-contrast-medium flex flex-wrap gap-xs text-xs@md">
+            <a class="color-inherit text-underline" href="https://app.chatbot-ai.ga/privacy.html">Terms</a>
+            <a class="color-inherit text-underline" href="https://app.chatbot-ai.ga/privacy.html">Privacy</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <script src="https://api-frame.krunk.cn/main/assets/js/scripts.min.js"></script>
+</body>
+</html>
